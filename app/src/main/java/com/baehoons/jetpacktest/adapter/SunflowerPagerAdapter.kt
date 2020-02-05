@@ -17,9 +17,9 @@
 package com.baehoons.jetpacktest.adapter
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.ListFragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.baehoons.jetpacktest.MainFragment
+
 
 
 const val MY_GARDEN_PAGE_INDEX = 0
@@ -32,7 +32,7 @@ class SunflowerPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment)
      */
     private val tabFragmentsCreators: Map<Int, () -> Fragment> = mapOf(
         MY_GARDEN_PAGE_INDEX to { MainFragment() },
-        PLANT_LIST_PAGE_INDEX to { ListFragment() }
+        PLANT_LIST_PAGE_INDEX to { com.baehoons.jetpacktest.ListFragment() }
     )
 
     override fun getItemCount() = tabFragmentsCreators.size
